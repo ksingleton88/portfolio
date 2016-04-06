@@ -1,0 +1,68 @@
+
+.button{
+	width: 20%;
+	background-color: #FFFFFF;
+}
+.dropdown {
+	position: relative;
+}
+
+.dropdown li{
+	display: inline-block;
+}
+
+.dropdown .dropdown-menu{
+	display: none;
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	/*width: 0;
+	overflow: hidden;*/
+}
+
+.dropdown:hover .dropdown-menu{
+	display: inline-block;
+}
+
+.dropdown button{
+	background-color: #FFFFFF;
+	color: #FFFFFF;
+	border: none;
+	margin: 0;
+	padding: 0.4em 0.8em;
+	font-size: 1em;
+}
+
+.dropdown a{
+	display: block;
+	padding: 0.2em 0.8em;
+	text-decoration: none;
+	background: #FFFFFF;
+	color: #333333;
+}
+
+.dropdown a:hover{
+	background: #BBBBBB;
+}
+
+.home-content{
+	background-image: url('http://i1077.photobucket.com/albums/w462/ksingleton88/background_zpshugpvshc.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 650px;
+	text-align: center;
+
+}
+
+h1{
+	color: #FFFFFF;
+	font-size: 7em;
+	padding-top: 22%;
+	margin: 0 auto;
+}
+
+.footer{
+	width: 100%;
+	height: 300px;
+}
