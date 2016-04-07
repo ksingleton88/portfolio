@@ -1,8 +1,7 @@
-// $(document).ready(function() {
-// 	$('.dropdown-menu').animate({
-// 		width: '50%'
-// 	})
-// });
+
+$(document).ready(function() {
+	$('.animated_link_start') .addClass('animated_link_end')
+});
 
 
 // javascript:alert("hello world");
