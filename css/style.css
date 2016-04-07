@@ -60,15 +60,18 @@
 .animated_link_start{
 	opacity: 0;
 	display: block;
+    /* Start with a position relative 10px up  */
     -webkit-transition: opacity 1s ease;
     -moz-transition: opacity 1s ease;
     -o-transition: opacity 1s ease;
     -ms-transition: opacity 1s ease;
     transition: opacity 1s ease;
+    /* Add transition for position */
 }
 
 .animated_link_end{
 	opacity: 1;
+    /* End with a position relative back at 0  */
 }
 
 
