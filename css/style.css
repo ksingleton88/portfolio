@@ -60,13 +60,11 @@
 .animated_link_start{
 	opacity: 0;
 	display: block;
-	transition: opacity 1s ease;
-	transition-delay: 1s;
-	 -webkit-transition: opacity 2s ease-in;
-    -moz-transition: opacity 2s ease-in;
-    -o-transition: opacity 2s ease-in;
-    -ms-transition: opacity 2s ease-in;
-    transition: opacity 2s ease-in;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    -ms-transition: opacity 1s ease;
+    transition: opacity 1s ease;
 }
 
 .animated_link_end{

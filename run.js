@@ -1,6 +1,7 @@
-
 $(document).ready(function() {
-	$('.animated_link_start') .addClass('animated_link_end')
+
+  $('.animated_link_start').addClass('animated_link_end');
+  
 });
 
 
