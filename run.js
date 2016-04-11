@@ -37,8 +37,32 @@ $(document).ready(function() {
   
   function transitionOut() {
     // - Remove class `animated_link_end` from each link
-    console.log('transitionOut');
+
+       // - Remove class `animated_link_end` from each link
+
+    //below code does not work
+
+    // $('.animated_link_end').each(function () {
+
+    // setTimeout(function() {
+    //   $link.removeClass('animated_link_end');
+    // }, time);
+
+    // });
+
+//The below code removes the links. However, not the same as how they come in. Do I need animated_link_end to be a class along w/ animated_start? If so, why does it break the jquery and not work at all? Everything re-appears. 
+
+
+    // $( ".menu-icon" ).on('click', function() {
+    // $( ".dropdown-menu" ).finish().fadeOut( 
+    //     800,
+    //     function(){
+    //       $(this).hide();
+    //     }
+    //   );
+    // });
   }
+  
   
   // Plugin example
   // $('.menu-icon').fancyMenu({
@@ -48,15 +72,3 @@ $(document).ready(function() {
 });
 
 
-// javascript:alert("hello world");
-
-// $(".dropdown").hover(function () {
-//    $(this).find('.button').fadeIn(100);
-//    $(".dropdown-menu").show();
-// },
-
-
-// function () {
-//    $(this).find('.box-hover').fadeOut(100);
-//    $(".box-tresc").hide();
-// });

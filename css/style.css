@@ -1,4 +1,16 @@
 
+@font-face {
+    font-family: 'inknut_antiquaextrabold';
+    src: url('fonts/inknutantiqua-extrabold-webfont.eot');
+    src: url('fonts/inknutantiqua-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/inknutantiqua-extrabold-webfont.woff') format('woff'),
+         url('fonts/inknutantiqua-extrabold-webfont.ttf') format('truetype'),
+         url('fonts/inknutantiqua-extrabold-webfont.svg#inknut_antiquaextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 .slide1{
 	background-image: url('http://i1077.photobucket.com/albums/w462/ksingleton88/background_zpsrvjn4kvr.png');
 	background-size: cover;
@@ -8,6 +20,7 @@
 	text-align: center;
 	margin: 0 auto;
 	padding: 0;
+
 }
 
 .button{
@@ -30,11 +43,6 @@
 
 	/*width: 0;
 	overflow: hidden;*/
-}
-
-.dropdown:hover .dropdown-menu{
-	display: inline-block;
-	background-color: #FFFFFF;
 }
 
 .dropdown button{
@@ -67,19 +75,30 @@
     -ms-transition: opacity 1s ease;
     transition: opacity 1s ease;
     /* Add transition for position */
+    color: white;
+
 }
 
 .animated_link_end{
 	opacity: 1;
+	display: block;
     /* End with a position relative back at 0  */
+
+     -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    -ms-transition: opacity 1s ease;
+    transition: opacity 1s ease;
 }
 
 
-h1{
+.title h1{
 	color: #000000;
 	font-size: 7em;
 	margin: 0 auto;
-	padding-top: 14%
+	padding-top: 14%;
+	font-family: 'inknut_antiquaextrabold';
+
 }
 
 .slide2, 
