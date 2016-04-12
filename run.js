@@ -2,17 +2,18 @@ $(document).ready(function() {
 
   // - Add an event listener for clicking hamburger menu icon
   $('.menu-icon').on('click', function() {
+    //this.parent (for styling dropdown once expanded. Modifying below code)
     
-    var $icon = $(this);
-    
+    var $dropdown = $(this).parent();
+   
     // If the menu is shown, transitionOut
-    if ($icon.hasClass('menu-open')) {
-      $icon.removeClass('menu-open');
+    if ($dropdown.hasClass('menu-open')) {
+      $dropdown.removeClass('menu-open');
       transitionOut();
     }
     // Else, transitionIn
     else {
-      $icon.addClass('menu-open');
+      $dropdown.addClass('menu-open');
       transitionIn();
     }
     
@@ -59,18 +60,9 @@ $(document).ready(function() {
 
 });
 
-//The below code removes the links. However, not the same as how they come in. Do I need animated_link_end to be a class along w/ animated_start? If so, why does it break the jquery and not work at all? Everything re-appears. 
 
 
-  //   $( ".menu-icon" ).on('click', function() {
-  //   $( ".dropdown-menu" ).finish().fadeOut( 
-  //       800,
-  //       function(){
-  //         $(this).hide();
-  //       }
-  //     );
-  //   });
-  // }
+// add class .drop-down stating whether or not you are expanded. 
   
   
   // Plugin example
