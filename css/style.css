@@ -20,8 +20,13 @@
 	text-align: center;
 	margin: 0 auto;
 	padding: 0;
+		transition:all .5s linear; 
+	    -o-transition:all .5s linear; 
+	    -moz-transition:all .5s linear; 
+	    -webkit-transition:all .5s linear;
 
 }
+
 
 .button{
 	width: 30%;
@@ -133,3 +138,44 @@
 	width: 100%;
 	height: 300px;
 }
+
+
+
+@media (max-width: 776px){
+	.title{
+		font-size: .5em;
+	}	
+
+	.slide1{
+		height: 400px;
+	
+	}
+	.button{
+		width: 60%;
+	}
+	.slide1,
+	.button,
+	.slide1{
+		transition:all .8s linear; 
+	    -o-transition:all .8s linear; 
+	    -moz-transition:all .8s linear; 
+	    -webkit-transition:all .8s linear;
+	}
+
+	@media (max-width: 500px){	
+
+	.slide1{
+		height: 300px;
+	
+	}
+	.slide1,
+	.button,
+	.slide1{
+		transition:all .8s linear; 
+	    -o-transition:all .8s linear; 
+	    -moz-transition:all .8s linear; 
+	    -webkit-transition:all .8s linear;
+	}
+
+}
+
