@@ -73,14 +73,12 @@
 .animated_link_start{
 	opacity: 0;
 	display: block;
-	position: relative;
-	top: -30px;
     /* Start with a position relative 10px up  */
     -webkit-transition: opacity 1s ease;
     -moz-transition: opacity 1s ease;
     -o-transition: opacity 1s ease;
     -ms-transition: opacity 1s ease;
-    transition: top 1s ease, opacity 1s ease;
+    transition: opacity 1s ease;
     /* Add transition for position */
 
 }
@@ -88,19 +86,15 @@
 .animated_link_end{
 	opacity: 1;
 	display: block;
-	position: relative;
-	top: 0;
     /* End with a position relative back at 0  */
-}
 
-.menu-open{
-	background-color: white;
-	-webkit-transition: opacity 1s ease;
+     -webkit-transition: opacity 1s ease;
     -moz-transition: opacity 1s ease;
     -o-transition: opacity 1s ease;
     -ms-transition: opacity 1s ease;
-    transition: background 1s ease, opacity 1s ease;
+    transition: opacity 1s ease;
 }
+
 
 .title h1{
 	color: #000000;
@@ -153,28 +147,28 @@
 	.button{
 		width: 60%;
 	}
-	.slide1,
-	.button,
-	.slide1{
-		transition:all .8s linear; 
-	    -o-transition:all .8s linear; 
-	    -moz-transition:all .8s linear; 
-	    -webkit-transition:all .8s linear;
-	}
 
-	@media (max-width: 500px){	
+@media (max-width: 500px){	
+
+	.title{
+		font-size: .4em;
+	}
 
 	.slide1{
 		height: 300px;
 	
 	}
+	.button{
+		width: 60%;
+	}
+
 	.slide1,
 	.button,
 	.slide1{
-		transition:all .8s linear; 
-	    -o-transition:all .8s linear; 
-	    -moz-transition:all .8s linear; 
-	    -webkit-transition:all .8s linear;
+		transition:all .1s linear; 
+	    -o-transition:all .1s linear; 
+	    -moz-transition:all .1s linear; 
+	    -webkit-transition:all .1s linear;
 	}
 
 }
