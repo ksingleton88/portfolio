@@ -147,28 +147,28 @@
 	.button{
 		width: 60%;
 	}
-	.slide1,
-	.button,
-	.slide1{
-		transition:all .8s linear; 
-	    -o-transition:all .8s linear; 
-	    -moz-transition:all .8s linear; 
-	    -webkit-transition:all .8s linear;
-	}
 
-	@media (max-width: 500px){	
+@media (max-width: 500px){	
+
+	.title{
+		font-size: .4em;
+	}
 
 	.slide1{
 		height: 300px;
 	
 	}
+	.button{
+		width: 60%;
+	}
+
 	.slide1,
 	.button,
 	.slide1{
-		transition:all .8s linear; 
-	    -o-transition:all .8s linear; 
-	    -moz-transition:all .8s linear; 
-	    -webkit-transition:all .8s linear;
+		transition:all .1s linear; 
+	    -o-transition:all .1s linear; 
+	    -moz-transition:all .1s linear; 
+	    -webkit-transition:all .1s linear;
 	}
 
 }
