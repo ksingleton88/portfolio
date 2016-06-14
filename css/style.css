@@ -1,18 +1,13 @@
-
 @font-face {
-    font-family: 'inknut_antiquaextrabold';
-    src: url('fonts/inknutantiqua-extrabold-webfont.eot');
-    src: url('fonts/inknutantiqua-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/inknutantiqua-extrabold-webfont.woff') format('woff'),
-         url('fonts/inknutantiqua-extrabold-webfont.ttf') format('truetype'),
-         url('fonts/inknutantiqua-extrabold-webfont.svg#inknut_antiquaextrabold') format('svg');
+    font-family: 'born_a_sinnerregular';
+    src: url('..fonts/bornasinner-webfont.woff2') format('woff2'),
+         url('../fonts/bornasinner-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 .slide1{
-	background-image: url('http://i1077.photobucket.com/albums/w462/ksingleton88/background_zpsrvjn4kvr.png');
+	background-image: url('http://i1077.photobucket.com/albums/w462/ksingleton88/background_zpsj0wh5ecn.jpg');
 	background-size: cover;
 	background-position: center;
 	width: 100%;
@@ -20,17 +15,17 @@
 	text-align: center;
 	margin: 0 auto;
 	padding: 0;
-		transition:all .5s linear; 
+	/*	transition:all .5s linear; 
 	    -o-transition:all .5s linear; 
 	    -moz-transition:all .5s linear; 
-	    -webkit-transition:all .5s linear;
+	    -webkit-transition:all .5s linear;*/
 
 }
-
 
 .button{
 	width: 30%;
 }
+
 .dropdown {
 	position: relative;
 	/*background-color: #FFFFFF;*/
@@ -45,7 +40,7 @@
 	margin: 0;
 	list-style: none;
 	padding: 0;
-
+	font-family: 'born_a_sinnerregular';
 	/*width: 0;
 	overflow: hidden;*/
 }
@@ -55,19 +50,21 @@
 	color: #FFFFFF;
 	border: none;
 	margin-right: 90%;
-	padding: 0;
+	padding-top: 3%;
 }
 
 .dropdown a{
 	display: block;
 	padding: 0.2em 0.8em;
 	text-decoration: none;
-	background-color: #FFFFFF;
-	color: #333333;
+	font-size: 2em;
+	color: #000000;
+
 }
 
 .dropdown a:hover{
-	background: #BBBBBB;
+	font-style: italic;
+	
 }
 
 .animated_link_start{
@@ -101,8 +98,7 @@
 	font-size: 7em;
 	margin: 0 auto;
 	padding-top: 14%;
-	font-family: 'inknut_antiquaextrabold';
-
+	font-family: 'born_a_sinnerregular';
 }
 
 .slide2, 
@@ -147,11 +143,17 @@
 	.button{
 		width: 60%;
 	}
+	.dropdown a{
+		font-size: 1.5em;
+	}
 
 @media (max-width: 500px){	
 
 	.title{
 		font-size: .4em;
+	}
+	.dropdown a{
+		font-size: 1em;
 	}
 
 	.slide1{

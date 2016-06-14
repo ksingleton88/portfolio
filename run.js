@@ -7,8 +7,8 @@ $(document).ready(function() {
     
     // If the menu is shown, transitionOut
     if ($icon.hasClass('menu-open')) {
-      $icon.removeClass('menu-open');
-      transitionOut();
+          $icon.removeClass('menu-open');
+       transitionOut();
     }
     // Else, transitionIn
     else {
@@ -36,11 +36,6 @@ $(document).ready(function() {
   }
   
   function transitionOut() {
-    // - Remove class `animated_link_end` from each link
-
-       // - Remove class `animated_link_end` from each link
-
-    //below code does not work
     var time = 0;
     var delay = 200;
 
@@ -56,28 +51,37 @@ $(document).ready(function() {
     })
 
   };
+  
+  $(function() {
+    // Stick the #nav to the top of the window
+    var nav = $('.menu-icon');
+    var navHomeY = nav.offset().top;
+    var isFixed = false;
+    var $w = $(window);
+    $w.scroll(function() {
+        var scrollTop = $w.scrollTop();
+        var shouldBeFixed = scrollTop > navHomeY;
+        if (shouldBeFixed && !isFixed) {
+            nav.css({
+                position: 'fixed',
+                top: 0,
+                left: nav.offset().left,
+                width: nav.width()
+            });
+            isFixed = true;
+        }
+        else if (!shouldBeFixed && isFixed)
+        {
+            nav.css({
+                position: 'static'
+            });
+            isFixed = false;
+        }
+    });
+});
 
 });
 
-//The below code removes the links. However, not the same as how they come in. Do I need animated_link_end to be a class along w/ animated_start? If so, why does it break the jquery and not work at all? Everything re-appears. 
-
-
-  //   $( ".menu-icon" ).on('click', function() {
-  //   $( ".dropdown-menu" ).finish().fadeOut( 
-  //       800,
-  //       function(){
-  //         $(this).hide();
-  //       }
-  //     );
-  //   });
-  // }
-  
-  
-  // Plugin example
-  // $('.menu-icon').fancyMenu({
-  //   linkClass: '.animated_link_start'
-  // });
-  
 
 
 
