@@ -57,7 +57,6 @@
 }
 
 .dropdown a{
-	display: block;
 	padding: 0.2em 0.8em;
 	text-decoration: none;
 	font-size: 2em;
@@ -69,10 +68,12 @@
 	font-style: italic;
 	
 }
-
+.menu-open + .dropdown-menu .animated_link_start{
+	display: block;
+}
 .animated_link_start{
 	opacity: 0;
-	display: block;
+	display: none;
     /* Start with a position relative 10px up  */
     -webkit-transition: opacity 1s ease;
     -moz-transition: opacity 1s ease;
@@ -104,8 +105,7 @@
 }
 
 .slide2, 
-.slide3,
-.slide4{
+.slide3{
 	width: 100%;
 	height: 100vh;
 	display: flex;
@@ -123,6 +123,7 @@
 	font-size: 3em;
 	font-family: 'born_a_sinnerregular';
 }
+
 
 .profileOne img,
 .profileTwo img{
@@ -153,27 +154,81 @@
 	position: relative;
 }
 
-.description{
-	position: absolute;
-	background: #778899;
-	opacity: 0;
-	transition: opacity 1s ease;
-	margin-top: -305px;
-	width: 300px;
-	height: 300px;
-	border-radius: 150px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
+.profileOne .fa,
+.profileTwo .fa{
+	margin: auto;
+	color: white;
+	font-size: 40px;
+	padding-top: 10px;
+}
 
+.bubble{
+  position:absolute;
+  width: 200px;
+  height: 35px;
+  padding:15px 30px;
+  margin:0;
+  top: 10px;
+  right: 70px;
+  z-index: 10;
+
+  color:#000;
+  background:#E0E0E0; /* default background for browsers without gradient support */
+  /* css3 */
+  background:-webkit-gradient(linear, 0 0, 0 100%, from(#E0E0E0), to(#E0E0E0));
+  background:-moz-linear-gradient(#E0E0E0, #E0E0E0);
+  background:-o-linear-gradient(#E0E0E0, #E0E0E0);
+  background:linear-gradient(#E0E0E0, #E0E0E0);
+  /* Using longhand to avoid inconsistencies between Safari 4 and Chrome 4 */
+  -webkit-border-top-left-radius:25px 50px;
+  -webkit-border-top-right-radius:25px 50px;
+  -webkit-border-bottom-right-radius:25px 50px;
+  -webkit-border-bottom-left-radius:25px 50px;
+  -moz-border-radius:25px / 50px;
+  border-radius:25px / 50px;
+
+  transition: 1s ease;
+  opacity: 0;
 }
-.text{
-	font-weight: bold;
-	color: #000000;
-	font-size: 3em;
+
+/* display of quote author (alternatively use a class on the element following the blockquote) */
+/*.bubble + p {margin:10px 150px 2em 0; text-align:right; font-style:italic;}
+*/
+/* creates the larger triangle */
+.bubble:before {
+  content:"";
+  position:absolute;
+  bottom:-30px;
+  right:80px;
+  border-width:0 0 30px 50px;
+  border-style:solid;
+  border-color:transparent #E0E0E0;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
 }
-.profileOne:hover .description, 
-.profileTwo:hover .description{
-	opacity: .5;
+
+/* creates the smaller triangle */
+.bubble:after {
+  content:"";
+  position:absolute;
+  bottom:-30px;
+  right:110px;
+  border-width:0 0 30px 20px;
+  border-style:solid;
+  border-color:transparent #fff;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+
+.bubble p{
+	font-size: 15px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+img:hover + .bubble{
+	opacity: 1;
 }
 
 .slide3{
@@ -182,6 +237,23 @@
 	background-image: url('http://i1077.photobucket.com/albums/w462/ksingleton88/sea_zpsdz50aanz.jpg');
 }
 
+#projects span{
+	margin-top: 0px; 
+	display: block;
+	color: #000000;
+	opacity: 0;
+	transition: opacity 1s ease, margin-top .5s ease;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+
+#projects:hover span{
+	color: #000000;
+	margin-top: 100px;
+	opacity: 1;
+
+}
 .project-content{
 	margin: auto;
 	height: 300px;
@@ -194,10 +266,13 @@ a:hover{
 
 }
 
+
+
 #projects {
 	width: 200px;
 	height: 65px;
 	border: solid;
+	border:none;
 	margin: auto;
 	text-align: center;
 	background-size: cover;
@@ -217,9 +292,11 @@ a:hover{
   -webkit-transition-property: transform;
   transition-property: transform;
 }
+
 #projects:before {
   pointer-events: none;
   position: absolute;
+  border: none;
   z-index: -1;
   content: '';
   top: 100%;
@@ -238,12 +315,14 @@ a:hover{
 #projects:hover, #projects:focus, #projects:active {
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
+  border:none;
   /* move the element up by 5px */
 }
 #projects:hover:before, #projects:focus:before, #projects:active:before {
   opacity: 1;
   -webkit-transform: translateY(5px);
   transform: translateY(5px);
+  border:none;
   /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }
 .p1{
@@ -261,17 +340,6 @@ a:hover{
 .p5{
 	background-image: url('http://i1077.photobucket.com/albums/w462/ksingleton88/shoppingicon_zpspxsqjtpr.jpg');
 }
-.slide4{
-	background-color: #303032;
-	text-align: center;
-}
-
-
-.footer{
-	width: 100%;
-	height: 300px;
-}
-
 
 
 @media (max-width: 776px){

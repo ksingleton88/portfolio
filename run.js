@@ -7,8 +7,10 @@ $(document).ready(function() {
     
     // If the menu is shown, transitionOut
     if ($icon.hasClass('menu-open')) {
-          $icon.removeClass('menu-open');
-       transitionOut();
+          
+       transitionOut(function(){
+        $icon.removeClass('menu-open');
+       });
     }
     // Else, transitionIn
     else {
@@ -35,7 +37,7 @@ $(document).ready(function() {
     });
   }
   
-  function transitionOut() {
+  function transitionOut(callback) {
     var time = 0;
     var delay = 200;
 
@@ -46,6 +48,7 @@ $(document).ready(function() {
 
       setTimeout(function() {
         $link.removeClass('animated_link_end');
+        setTimeout(callback, 1000);
       }, time);
 
     })
